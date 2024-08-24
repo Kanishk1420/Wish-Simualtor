@@ -1,0 +1,258 @@
+body {
+  background-color: #25294a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #2d325a;
+  padding: 45px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.button-56, .button-57 {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 20px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  font-family: Catamaran, sans-serif;
+}
+
+.button-56 {
+  background-image: linear-gradient(to right, rgb(210 143 214) 0%, #d89bfb 51%, rgb(210 143 214) 100%);
+}
+
+.button-56:hover {
+  background-position: right center;
+  color: black;
+  text-decoration: none;
+}
+
+.button-57 {
+  background-image: linear-gradient(to right, rgb(255 177 63) 0%, #FFE47A 51%, rgb(255 177 63) 100%);
+}
+
+.button-57:hover {
+  background-position: right center;
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #4d20ca, #976cc1);
+  font-family: Catamaran, sans-serif;
+  color: transparent;
+  text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 1s ease-in-out infinite ;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-image: linear-gradient(to left, #4d20ca, #976cc1);
+  }
+  50% {
+    background-image: linear-gradient(to right, #4d20ca, #976cc1);
+  }
+  100% {
+    background-image: linear-gradient(to left, #4d20ca, #976cc1);
+  }
+}
+.table {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+.table.show {
+  max-height: 500px;
+  margin-top: -20px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: Catamaran, sans-serif;
+  min-width: 400px;
+}
+
+.styled-table thead tr {
+  text-align: left;
+  color: rgb(203 213 224);
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #ddddddb4;
+  border-top: 1px solid #ddddddb4;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 1px solid #ddddddb4;
+}
+
+.styled-table tbody tr.active-row {
+  color: #ddddddb4;
+}
+
+.total-wishes, .primogems {
+  background-image: linear-gradient(to right, #202442 0%, #0d0f1b 71%, #202442 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: whitesmoke;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 20px;
+  font-family: Catamaran, sans-serif;
+}
+
+.total-wishes:hover, .primogems:hover {
+  background-position: right center;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.primo {
+  display: flex;
+  justify-content: center;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    padding: 35px;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    transform: translateY(60%);
+  }
+
+  .button-56, .button-57 {
+    font-size: 18px;
+    padding: 12px 35px;
+  }
+
+  .total-wishes, .primogems {
+    font-size: 18px;
+    padding: 12px 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    transform: translateY(55%);
+  }
+
+  .button-56, .button-57 {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  .total-wishes, .primogems {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .button-56, .button-57 {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+
+  .total-wishes, .primogems {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    transform: translateY(50%);
+  }
+
+  .button-56, .button-57 {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+
+  .total-wishes, .primogems {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    transform: translateY(45%);
+  }
+
+  .button-56, .button-57 {
+    font-size: 12px;
+    padding: 6px 20px;
+  }
+
+  .total-wishes, .primogems {
+    font-size: 12px;
+    padding: 6px 20px;
+    transform: translateY(-20%);
+  }
+
+  body {
+    overflow: hidden;
+  }
+}
